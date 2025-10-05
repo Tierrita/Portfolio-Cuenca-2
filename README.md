@@ -78,20 +78,15 @@ El futuro es híbrido: personas + máquinas colaborando para potenciar productiv
 
 ---
 
-## 🌐 Demo
 
-📎 **Versión en línea:** [Ver en GitHub Pages](https://tierrita.github.io/Portafolio-Cuenca-2/)  
-> Si aún no está visible, activá GitHub Pages desde **Settings → Pages → Branch: `main`**.
-
----
 
 ## 🧭 Roadmap personal
 
-- [x] Consolidar Python y lógica de programación.  
-- [x] Publicar mi primer portafolio web.  
-- [ ] Desarrollar un asistente IA simple con Flask y OpenAI API.  
-- [ ] Integrar IA en entornos industriales (Hagie/Agricultura).  
-- [ ] Participar en proyectos colaborativos de automatización.  
+- Consolidar Python y lógica de programación.  
+- Publicar mi primer portafolio web.  
+- Desarrollar un asistente IA simple con Flask y OpenAI API.  
+- Integrar IA en entornos industriales (Hagie/Agricultura).  
+- Participar en proyectos colaborativos de automatización.  
 
 ---
 
