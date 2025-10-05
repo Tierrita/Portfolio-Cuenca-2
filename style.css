@@ -21,11 +21,9 @@ body {
   animation: fadeInBody 2s ease forwards;
 }
 
-/* ===== Animación de entrada futurista ===== */
+/* ===== Animación de entrada ===== */
 @keyframes fadeInBody {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 /* ===== Fondo ===== */
@@ -39,29 +37,22 @@ body {
 /* ===== Imagen de perfil ===== */
 .hero-left {
   position: absolute;
-  top: 18%;
+  top: 15%;
   left: 8%;
 }
 
 .avatar-wrap {
   position: relative;
-  width: 320px;
-  aspect-ratio: 1/1;
+  width: 200px;     /* Tamaño más equilibrado */
+  height: 200px;
   border-radius: 50%;
-  isolation: isolate;
-  animation: floatRotate 12s ease-in-out infinite alternate;
-}
-
-@keyframes floatRotate {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(1.8deg) scale(1.04);
-  }
-  100% {
-    transform: rotate(-1.8deg) scale(1);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  animation: floatAvatar 6s ease-in-out infinite alternate;
 }
 
 .avatar {
@@ -69,25 +60,36 @@ body {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(0, 255, 255, 0.4);
-  box-shadow: 0 0 35px #00ffff, 0 0 80px rgba(0, 255, 255, 0.4);
-  transition: all 0.3s ease;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  transition: transform 0.3s ease;
 }
 
+.avatar:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+/* Glow suave alrededor */
 .avatar-wrap::before {
   content: "";
   position: absolute;
-  inset: -18px;
+  inset: -5px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.3), transparent 70%);
-  filter: blur(15px);
-  animation: pulseGlow 3s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(0,255,255,0.25), transparent 70%);
   z-index: -1;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Movimiento sutil (flotación ligera) */
+@keyframes floatAvatar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
 @keyframes pulseGlow {
-  0%, 100% { transform: scale(0.95); opacity: 0.6; }
-  50% { transform: scale(1.05); opacity: 1; }
+  0%, 100% { opacity: 0.6; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.03); }
 }
 
 /* ===== Header ===== */
@@ -153,26 +155,9 @@ section.active {
   display: block;
 }
 
-/* === Transición holográfica === */
-section.active::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(120deg, rgba(0,255,255,0.1), transparent, rgba(0,255,255,0.1));
-  mix-blend-mode: overlay;
-  animation: scan 1.2s ease;
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes scan {
-  0% { transform: translateY(-100%); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(100%); opacity: 0; }
 }
 
 /* ===== Redes sociales ===== */
@@ -227,82 +212,7 @@ footer span {
     margin-top: 25px;
   }
   .avatar-wrap {
-    width: 220px;
+    width: 160px;
+    height: 160px;
   }
 }
-
-/* --- Ajustes de imagen de perfil (avatar) --- */
-.avatar-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.avatar {
-  width: 150px; /* o el tamaño base que tenías */
-  border-radius: 50%;
-  border: 2px solid #00e0ff;
-  transform: scale(1.15); /* Aumenta un 15% */
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Efecto al pasar el mouse */
-.avatar:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 20px #00e0ff;
-}
-
-/* --- Imagen de perfil futurista (Avatar con energía AIONIX) --- */
-.avatar-wrap {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Borde animado que rota lentamente */
-.avatar-wrap::before {
-  content: "";
-  position: absolute;
-  width: 180px; /* Ajustá si querés más o menos espacio */
-  height: 180px;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    #00e0ff,
-    #0078ff,
-    #00e0ff
-  );
-  animation: rotateGlow 6s linear infinite;
-  filter: blur(4px);
-  z-index: 0;
-}
-
-/* Imagen de perfil */
-.avatar {
-  position: relative;
-  width: 150px;
-  border-radius: 50%;
-  border: 2px solid #00e0ff;
-  transform: scale(1.15);
-  transition: transform 0.3s ease-in-out;
-  z-index: 1;
-}
-
-/* Hover: agranda un poco y resalta el borde */
-.avatar:hover {
-  transform: scale(1.25);
-  box-shadow: 0 0 25px #00e0ff;
-}
-
-/* Animación del borde giratorio */
-@keyframes rotateGlow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
