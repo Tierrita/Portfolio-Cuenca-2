@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./bannerCuenca.png" width="100%" alt="Franco Cuenca - Técnico Superior en Programación - Innovación con IA"/>
+</p>
+
 <!-- 🚀 PORTAFOLIO - FRANCO CUENCA (TIERRITA) -->
 <p align="center">
   <!-- Si el banner no existe, podés subir uno local a ./assets/banner-tecprog-futurista.gif -->
