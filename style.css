@@ -35,24 +35,25 @@ body {
 }
 
 /* ===== Imagen de perfil ===== */
+/* ===== Imagen de perfil ===== */
 .hero-left {
   position: absolute;
-  top: 15%;
-  left: 8%;
+  top: 50%;              /* Centra verticalmente */
+  left: 8%;              /* Mantiene la posición horizontal */
+  transform: translateY(-50%); /* Alinea el centro exacto */
 }
 
 .avatar-wrap {
   position: relative;
-  width: 200px;     /* Tamaño más equilibrado */
-  height: 200px;
+  width: 380px;          /* ≈ 13 cm en pantallas 1080p */
+  height: 380px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
   transition: all 0.3s ease;
-  animation: floatAvatar 6s ease-in-out infinite alternate;
 }
 
 .avatar {
@@ -60,31 +61,29 @@ body {
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(0, 255, 255, 0.6);
+  border: 3px solid rgba(0, 255, 255, 0.6);
   transition: transform 0.3s ease;
 }
 
 .avatar:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #00ffff;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
 }
 
-/* Glow suave alrededor */
+/* Glow sutil de energía */
 .avatar-wrap::before {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: -8px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,255,255,0.25), transparent 70%);
+  background: radial-gradient(circle, rgba(0,255,255,0.2), transparent 70%);
   z-index: -1;
   animation: pulseGlow 4s ease-in-out infinite;
 }
 
-/* Movimiento sutil (flotación ligera) */
-@keyframes floatAvatar {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.03); }
 }
 
 @keyframes pulseGlow {
@@ -216,3 +215,4 @@ footer span {
     height: 160px;
   }
 }
+
