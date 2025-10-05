@@ -230,3 +230,79 @@ footer span {
     width: 220px;
   }
 }
+
+/* --- Ajustes de imagen de perfil (avatar) --- */
+.avatar-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  width: 150px; /* o el tamaño base que tenías */
+  border-radius: 50%;
+  border: 2px solid #00e0ff;
+  transform: scale(1.15); /* Aumenta un 15% */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.avatar:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #00e0ff;
+}
+
+/* --- Imagen de perfil futurista (Avatar con energía AIONIX) --- */
+.avatar-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Borde animado que rota lentamente */
+.avatar-wrap::before {
+  content: "";
+  position: absolute;
+  width: 180px; /* Ajustá si querés más o menos espacio */
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #00e0ff,
+    #0078ff,
+    #00e0ff
+  );
+  animation: rotateGlow 6s linear infinite;
+  filter: blur(4px);
+  z-index: 0;
+}
+
+/* Imagen de perfil */
+.avatar {
+  position: relative;
+  width: 150px;
+  border-radius: 50%;
+  border: 2px solid #00e0ff;
+  transform: scale(1.15);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* Hover: agranda un poco y resalta el borde */
+.avatar:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 25px #00e0ff;
+}
+
+/* Animación del borde giratorio */
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
