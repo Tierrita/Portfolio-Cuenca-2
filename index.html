@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Franco Cuenca</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fuente futurista -->
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Librerías -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--  Fondo IA -->
+  <div id="background"></div>
+
+  <!-- 👤 Imagen de perfil -->
+  <div class="hero-left">
+    <div class="avatar-wrap">
+      <img class="avatar" src="perfil.jpg" alt="Foto de Franco Cuenca" />
+    </div>
+  </div>
+
+  <!--  Header -->
+  <header>
+    <div class="profile">
+      <h1>Cuenca, Franco Angel</h1>
+      <p>🚀 Técnico Electromecánico | 💻 Técnico Superior en Programación | ⚡ Innovador en IA</p>
+    </div>
+  </header>
+
+  <!--  Menú -->
+  <nav>
+    <button onclick="showSection('about')">Sobre mí</button>
+    <button onclick="showSection('experience')">Experiencia</button>
+    <button onclick="showSection('projects')">Proyectos</button>
+    <button onclick="showSection('education')">Formación</button>
+    <button onclick="showSection('contact')">Contacto</button>
+  </nav>
+
+  <!--  Secciones -->
+  <main>
+    <section id="about" class="hidden">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy Franco Cuenca, técnico especializado en mantenimiento industrial y desarrollador en formación.
+        Combino experiencia práctica con una visión orientada a la innovación tecnológica y la integración de IA en procesos mecánicos.
+      </p>
+    </section>
+
+    <section id="experience" class="hidden">
+      <h2>Experiencia</h2>
+      <p>
+        Actualmente desempeño mi labor en Bayer – Planta María Eugenia, como Técnico Electromecánico especializado en maquinaria agrícola.
+        En paralelo, desarrollo proyectos enfocados en la fusión entre mecánica e inteligencia artificial.
+      </p>
+    </section>
+
+    <section id="projects" class="hidden">
+      <h2>Proyectos personales</h2>
+      <ul>
+        <li><strong>Bot de Mantenimiento Hagie</strong> – Chatbot con IA (Python, Flask, OpenAI API).</li>
+        <li><strong>Oveerword Store</strong> – E-commerce de ropa con branding propio.</li>
+        <li><strong>AIONIX</strong> – Startup de IA aplicada a mantenimiento industrial.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="hidden">
+      <h2>Formación académica</h2>
+      <ul>
+        <li>Técnico Electromecánico - 2020</li>
+        <li>Técnico Superior en Programación - En curso</li>
+        <li>AWS Cloud Practitioner - 2025</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h2>Contacto</h2>
+      <div class="socials">
+        <a href="mailto:francocuenca.dev@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/francocuenca" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!--  Footer -->
+  <footer>
+    <p>-2025 - Portfolio de Franco Cuenca-</p>
+    <span>-Hecho por Cuenca, Franco Angel-</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
