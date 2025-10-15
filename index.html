@@ -40,11 +40,14 @@
     <button onclick="showSection('experience')">Experiencia</button>
     <button onclick="showSection('projects')">Proyectos</button>
     <button onclick="showSection('education')">Formación</button>
+    <button onclick="showSection('skills')">Skills</button>
     <button onclick="showSection('contact')">Contacto</button>
   </nav>
 
   <!--  Secciones -->
   <main>
+
+    <!-- SOBRE MÍ -->
     <section id="about" class="hidden">
       <h2>Sobre mí</h2>
       <p>
@@ -53,23 +56,26 @@
       </p>
     </section>
 
+    <!-- EXPERIENCIA -->
     <section id="experience" class="hidden">
       <h2>Experiencia</h2>
       <p>
         Actualmente me desempeño en Bayer – Planta María Eugenia, como Técnico Electromecánico, hago mantenimiento tanto preventivo como correctivo en maquinarias agrícolas.
-        En paralelo, estoy cursando la carrera Tecnico Superior en Programacion, en base a mis conocimientos voy desarrollando proyectos enfocados en ganar experiencia en el mundo de la tecnologia.
+        En paralelo, estoy cursando la carrera Técnico Superior en Programación, desarrollando proyectos para ganar experiencia en el mundo de la tecnología.
       </p>
     </section>
 
+    <!-- PROYECTOS -->
     <section id="projects" class="hidden">
       <h2>Proyectos personales</h2>
       <ul>
         <li><strong>Bot de Mantenimiento Hagie</strong> – Chatbot con IA (Python, Flask, OpenAI API).</li>
-        <li><strong>Oveerword Store</strong> – E-commerce de ropa con branding propio.</li>
+        <li><strong>Overword Store</strong> – E-commerce de ropa con branding propio.</li>
         <li><strong>AIONIX</strong> – Startup de IA aplicada a mantenimiento industrial.</li>
       </ul>
     </section>
 
+    <!-- EDUCACIÓN -->
     <section id="education" class="hidden">
       <h2>Formación académica</h2>
       <ul>
@@ -78,6 +84,33 @@
       </ul>
     </section>
 
+    <!-- 🧠 SKILLS (Nueva sección con barras) -->
+    <section id="skills" class="hidden">
+      <h2>Skills</h2>
+
+      <div class="skill">
+        <span class="skill-title"><i class="fab fa-python"></i> Python</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-level="50"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span class="skill-title"><i class="fas fa-code"></i> HTML / CSS</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-level="60"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span class="skill-title"><i class="fas fa-robot"></i> IA / Chatbots</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-level="90"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
     <section id="contact" class="hidden">
       <h2>Contacto</h2>
       <div class="socials">
@@ -97,4 +130,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
