@@ -1,3 +1,29 @@
+// 🎯 Animar barras de Skills al entrar en la sección
+function animateSkills() {
+  const skills = document.querySelectorAll('.skill-level');
+  skills.forEach(skill => {
+    const level = skill.getAttribute('data-level');
+    skill.style.width = level + "%";
+    skill.classList.add("skill-loaded");
+  });
+}
+
+// 🧭 Modificar showSection para incluir la animación
+function showSection(sectionId) {
+  document.querySelectorAll("main section").forEach(sec => {
+    sec.classList.add("hidden");
+  });
+
+  const section = document.getElementById(sectionId);
+  section.classList.remove("hidden");
+
+  // Si es la sección Skills, dispara la animación
+  if (sectionId === "skills") {
+    setTimeout(animateSkills, 300);
+  }
+}
+
+
 // Fondo animado
 VANTA.NET({
   el: "#background",
@@ -27,3 +53,4 @@ function showSection(id) {
   selected.classList.add("active");
   selected.scrollIntoView({ behavior: "smooth" });
 }
+
