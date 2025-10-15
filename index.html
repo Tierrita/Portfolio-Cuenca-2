@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Franco Cuenca</title>
+
+  <!-- Estilos propios -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Fuente futurista -->
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Librerías -->
+  <!-- Librerías para el fondo IA (Vanta.js) e íconos -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!--  Fondo IA -->
+  <!-- 🌌 Fondo IA -->
   <div id="background"></div>
 
-  <!-- 👤 Imagen de perfil -->
+  <!-- 👤 Foto/Avatar lateral -->
   <div class="hero-left">
     <div class="avatar-wrap">
       <img class="avatar" src="perfil.jpg" alt="Foto de Franco Cuenca" />
     </div>
   </div>
 
-  <!--  Header -->
+  <!-- 🧠 Encabezado -->
   <header>
     <div class="profile">
       <h1>Cuenca, Franco Angel</h1>
@@ -34,7 +37,7 @@
     </div>
   </header>
 
-  <!--  Menú -->
+  <!-- 🧭 Menú de navegación (single-page) -->
   <nav>
     <button onclick="showSection('about')">Sobre mí</button>
     <button onclick="showSection('experience')">Experiencia</button>
@@ -44,89 +47,204 @@
     <button onclick="showSection('contact')">Contacto</button>
   </nav>
 
-  <!--  Secciones -->
+  <!-- 🧩 Secciones -->
   <main>
 
-    <!-- SOBRE MÍ -->
-    <section id="about" class="hidden">
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="about" class="active">
       <h2>Sobre mí</h2>
-      <p>
-        Soy Franco Cuenca, técnico especializado en mantenimiento industrial y desarrollador en formación.
-        Combino experiencia práctica con una visión orientada a la innovación tecnológica y la integración de IA en procesos mecánicos.
-      </p>
+      <div class="about-card">
+        <p>
+          Soy <strong>Franco Cuenca</strong>, técnico especializado en mantenimiento industrial y desarrollador en
+          formación.
+          Combino experiencia práctica con una visión orientada a la innovación tecnológica y la integración de
+          <strong>Inteligencia Artificial</strong> en procesos mecánicos.
+        </p>
+        <p>
+          Mi objetivo es unir el mundo industrial con la programación para crear soluciones que optimicen tiempos,
+          reduzcan fallos y aumenten la seguridad y la eficiencia.
+        </p>
+        <p class="quote">
+          <i class="fas fa-rocket"></i> “La innovación no es solo tecnología, es la forma en que resolvemos los
+          problemas.”
+        </p>
+      </div>
     </section>
 
-    <!-- EXPERIENCIA -->
+    <!-- ===== EXPERIENCIA ===== -->
     <section id="experience" class="hidden">
       <h2>Experiencia</h2>
-      <p>
-        Actualmente me desempeño en Bayer – Planta María Eugenia, como Técnico Electromecánico, hago mantenimiento tanto preventivo como correctivo en maquinarias agrícolas.
-        En paralelo, estoy cursando la carrera Técnico Superior en Programación, desarrollando proyectos para ganar experiencia en el mundo de la tecnología.
-      </p>
+
+      <div class="experience-container">
+
+        <!-- Card #1 -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <h3>Técnico Electromecánico</h3>
+            <span class="company">Bayer – Planta María Eugenia</span>
+            <span class="year">2020 - Actualidad</span>
+          </div>
+          <p>
+            Mantenimiento preventivo y correctivo en maquinarias agrícolas (Hagie HP204, John Deere, etc.).
+            Optimización de procesos hidráulicos, eléctricos y de calibración de sensores.
+          </p>
+          <ul class="exp-list">
+            <li>🔧 Mejoras técnicas en sistemas eléctricos y neumáticos.</li>
+            <li>⚙️ Diagnóstico y resolución de fallas en tiempo real.</li>
+            <li>💡 Propuestas de automatización con IA (proyecto AIONIX).</li>
+          </ul>
+        </div>
+
+        <!-- Card #2 -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <h3>Desarrollador en Formación</h3>
+            <span class="company">Instituto Teclab</span>
+            <span class="year">2023 - En curso</span>
+          </div>
+          <p>
+            Carrera de <strong>Técnico Superior en Programación</strong>, con proyectos orientados a IA, web y
+            automatización.
+          </p>
+          <ul class="exp-list">
+            <li>🧠 Integración de IA aplicada a mantenimiento industrial.</li>
+            <li>🌐 Desarrollo web (HTML, CSS, JS, React).</li>
+            <li>📊 Gestión y visualización de datos técnicos.</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
 
-    <!-- PROYECTOS -->
+    <!-- ===== PROYECTOS ===== -->
     <section id="projects" class="hidden">
       <h2>Proyectos personales</h2>
-      <ul>
-        <li><strong>Bot de Mantenimiento Hagie</strong> – Chatbot con IA (Python, Flask, OpenAI API).</li>
-        <li><strong>Overword Store</strong> – E-commerce de ropa con branding propio.</li>
-        <li><strong>AIONIX</strong> – Startup de IA aplicada a mantenimiento industrial.</li>
-      </ul>
+
+      <!-- Tabs -->
+      <div class="project-tabs">
+        <button class="project-btn active" onclick="showProject('portfolio')">Portfolio Personal y Profesional</button>
+        <button class="project-btn" onclick="showProject('overword')">Overword Store</button>
+        <button class="project-btn" onclick="showProject('chatbot')">ChatBot Mecánico (AIONIX)</button>
+      </div>
+
+      <!-- Contenidos -->
+      <div class="project-content">
+        <div id="portfolio" class="project-description active">
+          <h3>💼 Portfolio Personal y Profesional</h3>
+          <p>
+            Sitio web propio con estética IA, animaciones y estructura modular.
+            Construido con HTML, CSS y JavaScript. Optimizado para SEO y responsive.
+          </p>
+        </div>
+
+        <div id="overword" class="project-description">
+          <h3>🛍️ Overword Store</h3>
+          <p>
+            E-commerce de indumentaria con diseño tech.
+            Integración de pagos, panel de administración y métricas. Stack: React + Node.js + MongoDB.
+          </p>
+        </div>
+
+        <div id="chatbot" class="project-description">
+          <h3>🤖 ChatBot Mecánico - AIONIX</h3>
+          <p>
+            Asistente IA para técnicos de mantenimiento. Lectura de manuales (PDF) y respuestas con IA generativa.
+            Backend Python (Flask) + OpenAI API + embeddings para búsqueda semántica.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- EDUCACIÓN -->
+    <!-- ===== FORMACIÓN ===== -->
     <section id="education" class="hidden">
-      <h2>Formación académica</h2>
-      <ul>
-        <li>Técnico Electromecánico - 2020</li>
-        <li>Técnico Superior en Programación - En curso</li>
-      </ul>
+      <h2>Formación Académica</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-cogs"></i></div>
+          <div class="timeline-content">
+            <h3>Técnico Electromecánico</h3>
+            <p>EEST N.º 1 “Don Luis Bussalleu” – Finalizado en 2020.</p>
+            <span class="badge">Formación Técnica</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-bullhorn"></i></div>
+          <div class="timeline-content">
+            <h3>Community Management</h3>
+            <p>Educación Digital – Certificación obtenida en 2024.</p>
+            <span class="badge">Marketing Digital</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="timeline-content">
+            <h3>Técnico Superior en Programación</h3>
+            <p>Instituto Teclab – En curso. Enfocado en IA y automatización industrial.</p>
+            <span class="badge">Actual</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- 🧠 SKILLS (Nueva sección con barras) -->
+    <!-- ===== SKILLS ===== -->
     <section id="skills" class="hidden">
       <h2>Skills</h2>
 
       <div class="skill">
+        <span class="skill-title"><i class="fab fa-html5"></i> HTML / CSS</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-level="70"></div>
+        </div>
+      </div>
+
+      <div class="skill">
         <span class="skill-title"><i class="fab fa-python"></i> Python</span>
         <div class="skill-bar">
-          <div class="skill-level" data-level="50"></div>
+          <div class="skill-level" data-level="65"></div>
         </div>
       </div>
 
       <div class="skill">
-        <span class="skill-title"><i class="fas fa-code"></i> HTML / CSS</span>
-        <div class="skill-bar">
-          <div class="skill-level" data-level="60"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-title"><i class="fas fa-robot"></i> IA / Chatbots</span>
+        <span class="skill-title"><i class="fas fa-robot"></i> Trabajo con IA</span>
         <div class="skill-bar">
           <div class="skill-level" data-level="90"></div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACTO -->
+    <!-- ===== CONTACTO ===== -->
     <section id="contact" class="hidden">
       <h2>Contacto</h2>
-      <div class="socials">
-        <a href="mailto:francocuenca.dev@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/francocuenca" target="_blank"><i class="fab fa-github"></i></a>
+      <div class="contact-container">
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/francocuenca" target="_blank">github.com/francocuenca</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:francocuenca150@gmail.com">francocuenca150@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/549XXXXXXXXXX" target="_blank">+54 9 XX XXXX-XXXX</a>
+        </div>
       </div>
     </section>
+
   </main>
 
-  <!--  Footer -->
+  <!-- 🦶 Footer fijo -->
   <footer>
     <p>-2025 - Portfolio de Franco Cuenca-</p>
-    <span>-Hecho por Cuenca, Franco Angel-</span>
   </footer>
 
+  <!-- Lógica de la página -->
   <script src="script.js"></script>
 </body>
+
 </html>
