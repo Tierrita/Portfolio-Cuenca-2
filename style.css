@@ -657,3 +657,50 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+
+/* 🏠 HOME */
+.home-card {
+  text-align: center;
+  margin-top: 80px;
+  background: rgba(0, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.home-card:hover {
+  transform: scale(1.02);
+}
+
+.home-card h2 {
+  color: #00ffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.home-card p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.explore-btn {
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #00ffff;
+  color: #000;
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
+
+
