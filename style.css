@@ -25,7 +25,7 @@ body {
 }
 
 /* =========================================================
-   AVATAR LATERAL (foto)
+   AVATAR LATERAL
    ========================================================= */
 .hero-left {
   position: absolute;
@@ -64,17 +64,8 @@ body {
 }
 
 @keyframes pulseGlow {
-
-  0%,
-  100% {
-    opacity: 0.6;
-    transform: scale(0.98);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.03);
-  }
+  0%, 100% { opacity: 0.6; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1.03); }
 }
 
 /* =========================================================
@@ -105,6 +96,7 @@ nav {
   justify-content: center;
   gap: 12px;
   margin: 30px 0;
+  flex-wrap: wrap;
 }
 
 nav button {
@@ -150,21 +142,8 @@ section.active {
   opacity: 1;
 }
 
-/* Animación genérica */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* =========================================================
-   SOBRE MÍ (card sobria y legible)
+   SOBRE MÍ
    ========================================================= */
 #about {
   padding: 60px 20px;
@@ -189,477 +168,14 @@ section.active {
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
 }
 
-.about-card p {
-  color: #e0f7fa;
-  font-size: 1.05rem;
-  margin-bottom: 15px;
-}
-
 .about-card strong {
   color: #00ffff;
   text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
 }
 
-.about-card .quote {
-  margin-top: 25px;
-  text-align: center;
-  color: #80ffff;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.05rem;
-  text-shadow: 0 0 6px rgba(0, 255, 255, 0.3);
-}
-
 /* =========================================================
-   EXPERIENCIA (tarjetas corporativas)
+   HOME (nuevo)
    ========================================================= */
-#experience {
-  padding: 60px 20px;
-}
-
-#experience h2 {
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-.experience-container {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.experience-card {
-  background: rgba(0, 255, 255, 0.04);
-  border-left: 3px solid #00ffff;
-  border-radius: 12px;
-  padding: 25px 30px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
-  text-align: left;
-  backdrop-filter: blur(6px);
-  transition: all 0.3s ease;
-}
-
-.experience-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
-  border-left-color: #0088ff;
-}
-
-.exp-header {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.exp-header h3 {
-  color: #00ffff;
-  margin-bottom: 5px;
-  font-size: 1.3rem;
-}
-
-.company {
-  color: #b2ebf2;
-  font-size: 1rem;
-}
-
-.year {
-  color: #0088ff;
-  font-size: 0.95rem;
-  font-style: italic;
-}
-
-.experience-card p {
-  color: #e0f7fa;
-  line-height: 1.6;
-  margin: 10px 0 15px;
-}
-
-.exp-list {
-  list-style: none;
-  padding-left: 10px;
-}
-
-.exp-list li {
-  margin-bottom: 8px;
-  color: #b2ebf2;
-  font-size: 0.95rem;
-}
-
-.experience-card:hover .exp-list li {
-  color: #ffffff;
-}
-
-/* =========================================================
-   PROYECTOS (tabs)
-   ========================================================= */
-#projects {
-  padding: 60px 20px;
-}
-
-#projects h2 {
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff;
-  margin-bottom: 25px;
-}
-
-.project-tabs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 25px 0 35px 0;
-}
-
-.project-btn {
-  background: transparent;
-  border: 1px solid #00ffff;
-  color: #00ffff;
-  font-weight: 600;
-  border-radius: 10px;
-  padding: 10px 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.project-btn:hover {
-  background: #00ffff;
-  color: #000;
-  box-shadow: 0 0 15px #00ffff;
-}
-
-.project-btn.active {
-  background: linear-gradient(90deg, #00ffff, #0088ff);
-  color: #000;
-  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-}
-
-.project-content {
-  max-width: 700px;
-  margin: 0 auto;
-  background: rgba(0, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-}
-
-.project-description {
-  display: none;
-  animation: fadeIn 0.6s ease;
-}
-
-.project-description.active {
-  display: block;
-}
-
-.project-description h3 {
-  color: #00ffff;
-  margin-bottom: 12px;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-/* =========================================================
-   FORMACIÓN (timeline)
-   ========================================================= */
-#education {
-  padding: 60px 20px;
-}
-
-#education h2 {
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(180deg, #00ffff, #0088ff);
-  box-shadow: 0 0 15px #00ffff;
-  opacity: 0.4;
-}
-
-.timeline-item {
-  position: relative;
-  margin: 40px 0;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  animation: fadeInUp 1s ease both;
-}
-
-.timeline-icon {
-  background: linear-gradient(145deg, #00ffff, #0088ff);
-  color: #000;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
-  z-index: 2;
-  flex-shrink: 0;
-}
-
-.timeline-content {
-  background: rgba(0, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  border-radius: 15px;
-  padding: 20px 25px;
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  width: 100%;
-  text-align: left;
-  transition: all 0.3s ease;
-}
-
-.timeline-content:hover {
-  background: rgba(0, 255, 255, 0.1);
-  transform: scale(1.03);
-  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
-}
-
-.timeline-content h3 {
-  color: #00ffff;
-  margin-bottom: 8px;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-.timeline-content p {
-  color: #b2ebf2;
-  font-size: 0.95rem;
-}
-
-.badge {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #001f1f;
-  background: linear-gradient(90deg, #00ffff, #0088ff);
-  box-shadow: 0 0 15px #00ffff;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================================================
-   SKILLS (barras animadas)
-   ========================================================= */
-#skills {
-  padding: 50px;
-}
-
-.skill {
-  margin: 30px auto;
-  max-width: 500px;
-}
-
-.skill-title {
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #fff;
-  font-weight: 700;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 22px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
-}
-
-.skill-bar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.2), transparent 70%);
-  opacity: 0.4;
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-
-.skill-level {
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, #00ffff, #0088ff, #00ffff);
-  background-size: 200% 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #00ffff, 0 0 40px #00ffff;
-  animation: moveEnergy 3s linear infinite;
-  transition: width 2s ease-in-out;
-  position: relative;
-}
-
-@keyframes moveEnergy {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  100% {
-    background-position: 200% 50%;
-  }
-}
-
-.skill-counter {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.9rem;
-  color: #001f1f;
-  text-shadow: 0 0 10px #00ffff;
-  font-weight: 700;
-}
-
-.skill-bar:hover .skill-level {
-  filter: brightness(1.5);
-  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
-}
-
-/* =========================================================
-   CONTACTO (corporativo simple)
-   ========================================================= */
-#contact {
-  padding: 60px 20px;
-}
-
-#contact h2 {
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: rgba(0, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 15px 25px;
-  max-width: 400px;
-  width: 100%;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
-}
-
-.contact-item:hover {
-  background: rgba(0, 255, 255, 0.1);
-  transform: scale(1.03);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-}
-
-.contact-item i {
-  font-size: 1.8rem;
-  color: #00ffff;
-}
-
-.contact-item a {
-  color: #e0f7fa;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.contact-item:hover a {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-footer {
-  text-align: center;
-  color: #00ffff;
-  padding: 25px 0;
-  font-size: 1rem;
-  border-top: 1px solid rgba(0, 255, 255, 0.3);
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(6px);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-@media (max-width: 768px) {
-  .hero-left {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-
-  .avatar-wrap {
-    width: 250px;
-    height: 250px;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  footer {
-    font-size: 0.9rem;
-  }
-}
-
-
-/* 🏠 HOME */
 .home-card {
   text-align: center;
   margin-top: 80px;
@@ -668,6 +184,9 @@ footer {
   border-radius: 20px;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
   transition: transform 0.3s ease;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-card:hover {
@@ -685,22 +204,148 @@ footer {
   line-height: 1.6;
 }
 
+/* 🚀 BOTÓN “EMPEZAR” - Energía Neón */
 .explore-btn {
-  background-color: transparent;
+  background: transparent;
   border: 2px solid #00ffff;
   color: #00ffff;
-  padding: 10px 20px;
-  border-radius: 12px;
-  margin-top: 20px;
+  padding: 12px 28px;
+  border-radius: 30px;
   font-weight: 600;
-  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  margin-top: 25px;
+}
+
+.explore-btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #00ffff, #00bfff);
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.explore-btn:hover::before {
+  width: 100%;
+}
+
+.explore-btn span {
+  position: relative;
+  z-index: 1;
 }
 
 .explore-btn:hover {
-  background-color: #00ffff;
   color: #000;
-  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+  transform: translateY(-2px);
 }
 
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
+/* Tablets y notebooks */
+@media (max-width: 900px) {
+  body { overflow-x: hidden; }
+
+  .hero-left {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    transform: none;
+  }
+
+  .avatar-wrap {
+    width: 220px;
+    height: 220px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  nav button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .home-card {
+    margin-top: 40px;
+    padding: 25px;
+  }
+
+  .home-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .home-card p {
+    font-size: 1rem;
+  }
+
+  .explore-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Celulares medianos */
+@media (max-width: 600px) {
+  h1 { font-size: 1.5rem; }
+  header p { font-size: 0.9rem; }
+
+  nav button {
+    width: 45%;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .about-card, .experience-card, .project-content, .timeline-content {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .home-card h2 { font-size: 1.4rem; }
+  .home-card p { font-size: 0.9rem; }
+}
+
+/* Celulares pequeños */
+@media (max-width: 400px) {
+  .avatar-wrap {
+    width: 160px;
+    height: 160px;
+  }
+
+  nav button {
+    font-size: 0.8rem;
+    padding: 7px 8px;
+  }
+
+  .explore-btn {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}
