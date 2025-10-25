@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Franco Cuenca</title>
 
-  <!-- Estilos propios -->
-  <link rel="stylesheet" href="style.css" />
-
   <!-- Fuente futurista -->
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Librerías para el fondo IA (Vanta.js) e íconos -->
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Librerías -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
   <!-- 🌌 Fondo IA -->
   <div id="background"></div>
 
-  <!-- 👤 Foto/Avatar lateral -->
+  <!-- 👤 Avatar lateral -->
   <div class="hero-left">
     <div class="avatar-wrap">
       <img class="avatar" src="perfil.jpg" alt="Foto de Franco Cuenca" />
@@ -32,12 +32,12 @@
   <!-- 🧠 Encabezado -->
   <header>
     <div class="profile">
-      <h1>Cuenca, Franco Angel</h1>
-      <p>🚀 Técnico Electromecánico | 💻 Técnico Superior en Programación | ⚡ Innovador en IA</p>
+      <h1>Cuenca, Franco Ángel</h1>
+      <p>💻 Programador en formación | ⚙️ Base técnica e industrial | ⚡ Innovador en IA</p>
     </div>
   </header>
 
-  <!-- 🧭 Menú de navegación (single-page) -->
+  <!-- 🧭 Menú -->
   <nav>
     <button onclick="showSection('about')">Sobre mí</button>
     <button onclick="showSection('experience')">Experiencia</button>
@@ -52,64 +52,66 @@
 
     <!-- ===== SOBRE MÍ ===== -->
     <section id="about" class="active">
-      <h2>Sobre mí</h2>
+      <h2>Sobre mí 🚀</h2>
       <div class="about-card">
         <p>
-          Soy <strong>Franco Cuenca</strong>, técnico especializado en mantenimiento industrial y desarrollador en
-          formación.
-          Combino experiencia práctica con una visión orientada a la innovación tecnológica y la integración de
-          <strong>Inteligencia Artificial</strong> en procesos mecánicos.
+          Soy <strong>Franco Cuenca</strong>, apasionado por la <strong>tecnología</strong>, la <strong>mecánica</strong> y la <strong>automatización</strong>.
+          Después de mi paso por la industria, decidí redirigir mi camino profesional hacia el mundo <strong>IT</strong>, con el objetivo de seguir creciendo y aportar
+          soluciones innovadoras desde la <strong>programación</strong>.
         </p>
         <p>
-          Mi objetivo es unir el mundo industrial con la programación para crear soluciones que optimicen tiempos,
-          reduzcan fallos y aumenten la seguridad y la eficiencia.
+          Actualmente me encuentro en una etapa de <strong>evolución constante</strong>, combinando mi experiencia técnica con el desarrollo de software
+          para crear herramientas inteligentes que conecten el mundo físico con el digital.
+        </p>
+        <p>
+          Mi objetivo es unir la <strong>lógica industrial</strong> con la <strong>programación</strong> para optimizar tiempos, reducir fallos
+          y aumentar la eficiencia en entornos productivos.
         </p>
         <p class="quote">
-          <i class="fas fa-rocket"></i> “La innovación no es solo tecnología, es la forma en que resolvemos los
-          problemas.”
+          ⚡ <em>“Transformar la experiencia técnica en soluciones digitales: ese es mi motor.”</em>
         </p>
       </div>
     </section>
 
     <!-- ===== EXPERIENCIA ===== -->
     <section id="experience" class="hidden">
-      <h2>Experiencia</h2>
+      <h2>Experiencia 💼</h2>
 
       <div class="experience-container">
 
-        <!-- Card #1 -->
+        <!-- Bayer -->
         <div class="experience-card">
           <div class="exp-header">
             <h3>Técnico Electromecánico</h3>
             <span class="company">Bayer – Planta María Eugenia</span>
-            <span class="year">2020 - Actualidad</span>
+            <span class="year">2020 - 2024</span>
           </div>
           <p>
-            Mantenimiento preventivo y correctivo en maquinarias agrícolas (Hagie HP204, John Deere, etc.).
-            Optimización de procesos hidráulicos, eléctricos y de calibración de sensores.
+            Desempeñé tareas de mantenimiento preventivo y correctivo en maquinaria agrícola (Hagie HP204, John Deere, etc.).
+            Desarrollé habilidades técnicas y lógicas aplicadas al diagnóstico, reparación y mejora continua.
           </p>
           <ul class="exp-list">
-            <li>🔧 Mejoras técnicas en sistemas eléctricos y neumáticos.</li>
-            <li>⚙️ Diagnóstico y resolución de fallas en tiempo real.</li>
-            <li>💡 Propuestas de automatización con IA (proyecto AIONIX).</li>
+            <li>🔧 Experiencia práctica en sistemas eléctricos, neumáticos e hidráulicos.</li>
+            <li>⚙️ Capacidad de resolución de fallas y análisis técnico.</li>
+            <li>💡 Iniciativa en proyectos de automatización e innovación (base del proyecto AIONIX).</li>
           </ul>
         </div>
 
-        <!-- Card #2 -->
+        <!-- Actualidad -->
         <div class="experience-card">
           <div class="exp-header">
-            <h3>Desarrollador en Formación</h3>
+            <h3>Programador en formación</h3>
             <span class="company">Instituto Teclab</span>
-            <span class="year">2023 - En curso</span>
+            <span class="year">2023 - Actualidad</span>
           </div>
           <p>
-            Carrera de <strong>Técnico Superior en Programación</strong>, con proyectos orientados a IA, web y
-            automatización.
+            Estudiante de la carrera <strong>Técnico Superior en Programación</strong>, con proyectos enfocados en IA, desarrollo web
+            y automatización de procesos industriales.
           </p>
           <ul class="exp-list">
-            <li>🧠 Integración de IA aplicada a mantenimiento industrial.</li>
-            <li>🌐 Desarrollo web (HTML, CSS, JS, React).</li>
-            <li>📊 Gestión y visualización de datos técnicos.</li>
+            <li>🤖 Implementación de IA aplicada al mantenimiento industrial.</li>
+            <li>🌐 Desarrollo Web (HTML, CSS, JavaScript, React).</li>
+            <li>📊 Análisis de datos y visualización técnica.</li>
           </ul>
         </div>
 
@@ -118,46 +120,50 @@
 
     <!-- ===== PROYECTOS ===== -->
     <section id="projects" class="hidden">
-      <h2>Proyectos personales</h2>
+      <h2>Proyectos personales ⚙️</h2>
 
-      <!-- Tabs -->
       <div class="project-tabs">
-        <button class="project-btn active" onclick="showProject('portfolio')">Portfolio Personal y Profesional</button>
+        <button class="project-btn active" onclick="showProject('portfolio')">Portfolio Profesional</button>
         <button class="project-btn" onclick="showProject('overword')">Overword Store</button>
         <button class="project-btn" onclick="showProject('chatbot')">ChatBot Mecánico (AIONIX)</button>
       </div>
 
-      <!-- Contenidos -->
       <div class="project-content">
+
+        <!-- Portfolio -->
         <div id="portfolio" class="project-description active">
-          <h3>💼 Portfolio Personal y Profesional</h3>
+          <h3>💼 Portfolio Profesional</h3>
           <p>
-            Sitio web propio con estética IA, animaciones y estructura modular.
-            Construido con HTML, CSS y JavaScript. Optimizado para SEO y responsive.
+            Sitio web con estética futurista e inspirada en IA, diseñado con HTML, CSS y JavaScript.
+            Presenta mi perfil técnico, académico y proyectos. 100% responsive y optimizado para SEO.
           </p>
         </div>
 
+        <!-- Overword -->
         <div id="overword" class="project-description">
           <h3>🛍️ Overword Store</h3>
           <p>
-            E-commerce de indumentaria con diseño tech.
-            Integración de pagos, panel de administración y métricas. Stack: React + Node.js + MongoDB.
+            E-commerce de indumentaria con enfoque futurista. Integra diseño, marketing digital y gestión técnica.
+            Stack: React + Node.js + MongoDB.
           </p>
         </div>
 
+        <!-- Chatbot -->
         <div id="chatbot" class="project-description">
           <h3>🤖 ChatBot Mecánico - AIONIX</h3>
           <p>
-            Asistente IA para técnicos de mantenimiento. Lectura de manuales (PDF) y respuestas con IA generativa.
-            Backend Python (Flask) + OpenAI API + embeddings para búsqueda semántica.
+            Asistente IA desarrollado para técnicos de mantenimiento industrial.
+            Utiliza procesamiento de lenguaje natural para interpretar preguntas y analizar manuales en PDF.
+            Backend con Python (Flask) + OpenAI API + embeddings para búsqueda semántica.
           </p>
         </div>
+
       </div>
     </section>
 
     <!-- ===== FORMACIÓN ===== -->
     <section id="education" class="hidden">
-      <h2>Formación Académica</h2>
+      <h2>Formación Académica 🎓</h2>
 
       <div class="timeline">
 
@@ -193,37 +199,45 @@
 
     <!-- ===== SKILLS ===== -->
     <section id="skills" class="hidden">
-      <h2>Skills</h2>
+      <h2>Skills 💡</h2>
 
       <div class="skill">
         <span class="skill-title"><i class="fab fa-html5"></i> HTML / CSS</span>
-        <div class="skill-bar">
-          <div class="skill-level" data-level="70"></div>
-        </div>
+        <div class="skill-bar"><div class="skill-level" data-level="80"></div></div>
       </div>
 
       <div class="skill">
         <span class="skill-title"><i class="fab fa-python"></i> Python</span>
-        <div class="skill-bar">
-          <div class="skill-level" data-level="65"></div>
-        </div>
+        <div class="skill-bar"><div class="skill-level" data-level="75"></div></div>
       </div>
 
       <div class="skill">
-        <span class="skill-title"><i class="fas fa-robot"></i> Trabajo con IA</span>
-        <div class="skill-bar">
-          <div class="skill-level" data-level="90"></div>
-        </div>
+        <span class="skill-title"><i class="fab fa-js-square"></i> JavaScript</span>
+        <div class="skill-bar"><div class="skill-level" data-level="70"></div></div>
+      </div>
+
+      <div class="skill">
+        <span class="skill-title"><i class="fas fa-robot"></i> Inteligencia Artificial</span>
+        <div class="skill-bar"><div class="skill-level" data-level="85"></div></div>
+      </div>
+
+      <div class="skill">
+        <span class="skill-title"><i class="fas fa-database"></i> SQL / Bases de Datos</span>
+        <div class="skill-bar"><div class="skill-level" data-level="65"></div></div>
       </div>
     </section>
 
     <!-- ===== CONTACTO ===== -->
     <section id="contact" class="hidden">
-      <h2>Contacto</h2>
+      <h2>Contacto 📬</h2>
       <div class="contact-container">
         <div class="contact-item">
           <i class="fab fa-github"></i>
           <a href="https://github.com/francocuenca" target="_blank">github.com/francocuenca</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank">LinkedIn / Franco Cuenca</a>
         </div>
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
@@ -238,12 +252,11 @@
 
   </main>
 
-  <!-- 🦶 Footer fijo -->
+  <!-- 🦿 Footer -->
   <footer>
-    <p>-2025 - Portfolio de Franco Cuenca-</p>
+    <p>⚡ 2025 - Portfolio de Franco Cuenca ⚡</p>
   </footer>
 
-  <!-- Lógica de la página -->
   <script src="script.js"></script>
 </body>
 
