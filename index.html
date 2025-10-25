@@ -37,18 +37,37 @@
     </div>
   </header>
 
-  <!-- 🧭 Menú -->
-  <nav>
-    <button onclick="showSection('about')">Sobre mí</button>
-    <button onclick="showSection('experience')">Experiencia</button>
-    <button onclick="showSection('projects')">Proyectos</button>
-    <button onclick="showSection('education')">Formación</button>
-    <button onclick="showSection('skills')">Skills</button>
-    <button onclick="showSection('contact')">Contacto</button>
-  </nav>
+ <!-- 🧭 Menú -->
+<nav>
+  <button onclick="showSection('home')">🏠 Home</button>
+  <button onclick="showSection('about')">Sobre mí</button>
+  <button onclick="showSection('experience')">Experiencia</button>
+  <button onclick="showSection('projects')">Proyectos</button>
+  <button onclick="showSection('education')">Formación</button>
+  <button onclick="showSection('skills')">Skills</button>
+  <button onclick="showSection('contact')">Contacto</button>
+</nav>
+
 
   <!-- 🧩 Secciones -->
   <main>
+
+    <!-- ===== HOME ===== -->
+<section id="home" class="active">
+  <div class="home-card">
+    <h2>👋 ¡Bienvenido!</h2>
+    <p>
+      Soy <strong>Franco Cuenca</strong> — Técnico Electromecánico y <strong>Programador en formación</strong>.
+      Este portfolio resume mi recorrido profesional, mis proyectos y mi evolución en el mundo <strong>IT</strong> 🔥.
+    </p>
+    <p>
+      Explora las secciones para conocer mi experiencia, formación y los proyectos donde combino
+      <strong>lógica técnica + innovación digital</strong> ⚡.
+    </p>
+    <button class="explore-btn" onclick="showSection('about')">👉 Empezar</button>
+  </div>
+</section>
+
 
     <!-- ===== SOBRE MÍ ===== -->
     <section id="about" class="active">
@@ -261,3 +280,4 @@
 </body>
 
 </html>
+
