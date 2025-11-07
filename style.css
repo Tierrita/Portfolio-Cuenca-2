@@ -273,3 +273,393 @@ section.active {
   .explore-btn { padding: 10px 22px; font-size: 0.85rem; }
   footer { font-size: 0.75rem; }
 }
+
+/* =========================================================
+   FOOTER FIJO
+   ========================================================= */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #00ffff;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 255, 255, 0.2);
+  z-index: 10;
+}
+
+/* =========================================================
+   SECCIÓN PROYECTOS - Estilo Cyber Limpio
+   ========================================================= */
+#projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  color: var(--cyber-cyan);
+  text-shadow: 0 0 15px var(--cyber-cyan);
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Contenedor de los botones (tabs) */
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+/* Botones individuales */
+.project-btn {
+  background: transparent;
+  color: var(--cyber-cyan);
+  border: 1px solid var(--cyber-cyan);
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Hover con energía */
+.project-btn:hover {
+  background: var(--cyber-cyan);
+  color: #000;
+  box-shadow: 0 0 20px var(--cyber-cyan), 0 0 30px var(--cyber-cyan);
+  transform: translateY(-2px);
+}
+
+/* Botón activo (tab actual) */
+.project-btn.active {
+  background: linear-gradient(90deg, var(--cyber-cyan), var(--cyber-blue));
+  color: #000;
+  border-color: var(--cyber-blue);
+  box-shadow: 0 0 25px var(--cyber-cyan);
+  transform: translateY(-2px);
+}
+
+/* Bloque del contenido */
+.project-content {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 850px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+/* Títulos dentro de cada proyecto */
+.project-description h3 {
+  color: var(--cyber-cyan);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  text-shadow: 0 0 8px var(--cyber-cyan);
+}
+
+/* Párrafos */
+.project-description p {
+  color: #d8f9ff;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Transición suave entre proyectos */
+.project-description {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-description.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+}
+
+
+/* =========================================================
+   SECCIÓN FORMACIÓN - Diseño Futurista y Limpio
+   ========================================================= */
+#education {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#education h2 {
+  color: var(--cyber-cyan);
+  font-size: 2rem;
+  text-shadow: 0 0 15px var(--cyber-cyan);
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* Línea vertical que conecta los ítems */
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 25px;
+  border-left: 2px solid rgba(0, 255, 255, 0.2);
+}
+
+/* Cada bloque de formación */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 25px;
+  text-align: left;
+}
+
+/* Puntos de conexión */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--cyber-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--cyber-cyan);
+}
+
+/* Título del estudio */
+.timeline-content h3 {
+  color: var(--cyber-cyan);
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  text-shadow: 0 0 8px var(--cyber-cyan);
+}
+
+/* Texto descriptivo */
+.timeline-content p {
+  color: #d8f9ff;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+/* Etiquetas tipo "badge" */
+.badge {
+  display: inline-block;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid var(--cyber-cyan);
+  color: var(--cyber-cyan);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-top: 6px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+/* Animación de aparición */
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInSlide 0.8s ease forwards;
+}
+
+@keyframes fadeInSlide {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 15px;
+  }
+  .timeline-item::before {
+    left: -8px;
+  }
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* =========================================================
+   SKILLS - Barras de energía
+   ========================================================= */
+#skills {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#skills h2 {
+  color: var(--cyber-cyan);
+  font-size: 2rem;
+  text-shadow: 0 0 15px var(--cyber-cyan);
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Contenedor general de cada skill */
+.skill {
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+/* Nombre del skill */
+.skill-title {
+  display: block;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+/* Contenedor de la barra */
+.skill-bar {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Barra que se llena */
+.skill-level {
+  background: linear-gradient(90deg, var(--cyber-cyan), var(--cyber-blue));
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--cyber-cyan);
+  transition: width 1s ease-in-out;
+}
+
+/* Contador de porcentaje */
+.skill-counter {
+  position: absolute;
+  right: 8px;
+  top: -22px;
+  font-size: 0.9rem;
+  color: var(--cyber-cyan);
+  text-shadow: 0 0 10px var(--cyber-cyan);
+}
+
+/* Hover: resalta el efecto */
+.skill:hover .skill-bar {
+  box-shadow: 0 0 15px var(--cyber-cyan), inset 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .skill { max-width: 90%; }
+  .skill-title { font-size: 0.95rem; }
+}
+
+
+/* =========================================================
+   SKILLS - Muestra el porcentaje al final de la barra
+   ========================================================= */
+.skill-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 14px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.skill-level {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--cyber-cyan), var(--cyber-blue));
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 0 15px var(--cyber-cyan);
+  transition: width 1.2s ease-in-out;
+}
+
+.skill-percent {
+  position: absolute;
+  right: 10px;
+  font-size: 0.85rem;
+  color: var(--cyber-cyan);
+  text-shadow: 0 0 6px var(--cyber-cyan);
+  font-weight: 600;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTACTO - Diseño futurista
+   ========================================================= */
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #e0f7fa;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px 20px;
+  width: fit-content;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+}
+
+.contact-item i {
+  color: #00ffff;
+  font-size: 1.3rem;
+}
+
+.contact-item a {
+  color: #e0f7fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+  transform: scale(1.05);
+}
+
+.contact-item:hover a {
+  color: #00ffff;
+}

@@ -25,7 +25,7 @@
   <!-- 👤 Avatar lateral -->
   <div class="hero-left">
     <div class="avatar-wrap">
-      <img class="avatar" src="perfil.jpg" alt="Foto de Franco Cuenca" />
+      <img class="avatar" src="perfil.jpg" alt="Foto de perfil Franco Cuenca" />
     </div>
   </div>
 
@@ -39,7 +39,7 @@
 
  <!-- 🧭 Menú -->
 <nav>
-  <button onclick="showSection('home')">🏠 Home</button>
+  <button onclick="showSection('home')">Home</button>
   <button onclick="showSection('about')">Sobre mí</button>
   <button onclick="showSection('experience')">Experiencia</button>
   <button onclick="showSection('projects')">Proyectos</button>
@@ -57,7 +57,7 @@
   <div class="home-card">
     <h2>👋 ¡Bienvenido!</h2>
     <p>
-      Soy <strong>Franco Cuenca</strong> Técnico Electromecánico y <strong>Programador en formación</strong>.
+      Soy <strong>Franco Cuenca</strong> Técnico Electromecánico y Programador en formación.
       Este portfolio resume mi recorrido profesional, mis proyectos y mi evolución en el mundo IT 🔥.
     </p>
     <p>
@@ -72,7 +72,7 @@
 
 
     <!-- ===== SOBRE MÍ ===== -->
-    <section id="about" class="active">
+    <section id="about" class="hidden">
       <h2>Sobre mí 🚀</h2>
       <div class="about-card">
         <p>
@@ -193,7 +193,7 @@
 
     <!-- ===== FORMACIÓN ===== -->
     <section id="education" class="hidden">
-      <h2>Formación Académica 🎓</h2>
+      <h2>Formación Académica <i class="fas fa-graduation-cap"></i></h2>
 
       <div class="timeline">
 
@@ -227,54 +227,112 @@
       </div>
     </section>
 
-    <!-- ===== SKILLS ===== -->
-    <section id="skills" class="hidden">
-      <h2>Skills 💡</h2>
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="hidden">
+  <h2>Skills 💡</h2>
 
-      <div class="skill">
-        <span class="skill-title"><i class="fab fa-html5"></i> HTML / CSS</span>
-        <div class="skill-bar"><div class="skill-level" data-level="80"></div></div>
-      </div>
+  <div class="skill">
+    <span class="skill-title"><i class="fab fa-html5"></i> HTML <small>(Advanced)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="100"></div>
+      <span class="skill-percent">100%</span>
+    </div>
+  </div>
 
-      <div class="skill">
-        <span class="skill-title"><i class="fab fa-python"></i> Python</span>
-        <div class="skill-bar"><div class="skill-level" data-level="75"></div></div>
-      </div>
+  <div class="skill">
+    <span class="skill-title"><i class="fab fa-css3-alt"></i> CSS <small>(Advanced)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="100"></div>
+      <span class="skill-percent">100%</span>
+    </div>
+  </div>
 
-      <div class="skill">
-        <span class="skill-title"><i class="fab fa-js-square"></i> JavaScript</span>
-        <div class="skill-bar"><div class="skill-level" data-level="70"></div></div>
-      </div>
+  <div class="skill">
+    <span class="skill-title"><i class="fas fa-database"></i> Bases de Datos <small>(Advanced)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="100"></div>
+      <span class="skill-percent">100%</span>
+    </div>
+  </div>
 
-      <div class="skill">
-        <span class="skill-title"><i class="fas fa-robot"></i> Inteligencia Artificial</span>
-        <div class="skill-bar"><div class="skill-level" data-level="85"></div></div>
-      </div>
+  <div class="skill">
+    <span class="skill-title"><i class="fab fa-python"></i> Python <small>(Advanced)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="70"></div>
+      <span class="skill-percent">70%</span>
+    </div>
+  </div>
 
-      <div class="skill">
-        <span class="skill-title"><i class="fas fa-database"></i> SQL / Bases de Datos</span>
-        <div class="skill-bar"><div class="skill-level" data-level="65"></div></div>
-      </div>
-    </section>
+  <div class="skill">
+    <span class="skill-title"><i class="fab fa-js-square"></i> JavaScript <small>(Advanced)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="90"></div>
+      <span class="skill-percent">90%</span>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span class="skill-title"><i class="fab fa-react"></i> React <small>(Básico)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="50"></div>
+      <span class="skill-percent">50%</span>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span class="skill-title"><i class="fab fa-node-js"></i> Node.js <small>(Básico)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="50"></div>
+      <span class="skill-percent">50%</span>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span class="skill-title"><i class="fas fa-robot"></i> Inteligencia Artificial <small>(Advanced)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="100"></div>
+      <span class="skill-percent">100%</span>
+    </div>
+  </div>
+
+  <div class="skill">
+    <span class="skill-title"><i class="fas fa-bolt"></i> Ganas de Aprender <small>(Advanced)</small></span>
+    <div class="skill-bar">
+      <div class="skill-level" data-level="100"></div>
+      <span class="skill-percent">100%</span>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- ===== CONTACTO ===== -->
-    <section id="contact" class="hidden">
-      <h2>Contacto 📬</h2>
-      <div class="contact-container">
-        <div class="contact-item">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/francocuenca" target="_blank">github.com/francocuenca</a>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank">LinkedIn / Franco Cuenca</a>
-        </div>
-        <div class="contact-item">
-          <i class="fab fa-whatsapp"></i>
-          <p>📞WhatsApp: +54 2474475013 </p>
-        </div>
-      </div>
-    </section>
+<section id="contact" class="hidden">
+  <h2>Contacto 📬</h2>
+  <div class="contact-container">
+    <div class="contact-item">
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/tierrita" target="_blank">github.com/tierrita</a>
+    </div>
+
+
+    <div class="contact-item">
+      <i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank">LinkedIn / Franco Cuenca</a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:francocuenca150@gmail.com">francocuenca150@gmail.com</a>
+    </div>
+
+    <div class="contact-item">
+      <i class="fab fa-whatsapp"></i>
+      <a href="https://wa.me/542474475013" target="_blank">WhatsApp: +54 2474 475013</a>
+    </div>
+  </div>
+</section>
+
 
   </main>
 
