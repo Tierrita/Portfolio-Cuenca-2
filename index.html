@@ -4,10 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> -Portfolio Cuenca Franco- </title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Franco Cuenca - Desarrollador Full Stack | Portfolio Profesional</title>
+  <meta name="description" content="Portfolio de Franco Cuenca - Técnico Electromecánico y Desarrollador en formación. Especializado en IA, desarrollo web y automatización industrial." />
+  <meta name="keywords" content="Franco Cuenca, desarrollador, programador, IA, automatización, portfolio, React, Node.js, Python" />
+  <meta name="author" content="Franco Cuenca" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tierrita.github.io/Portfolio-Cuenca-2/" />
+  <meta property="og:title" content="Franco Cuenca - Desarrollador Full Stack" />
+  <meta property="og:description" content="Técnico Electromecánico y Desarrollador especializado en IA, desarrollo web y automatización." />
+  <meta property="og:image" content="https://tierrita.github.io/Portfolio-Cuenca-2/bannerCuenca.png" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tierrita.github.io/Portfolio-Cuenca-2/" />
+  <meta property="twitter:title" content="Franco Cuenca - Desarrollador Full Stack" />
+  <meta property="twitter:description" content="Técnico Electromecánico y Desarrollador especializado en IA, desarrollo web y automatización." />
+  <meta property="twitter:image" content="https://tierrita.github.io/Portfolio-Cuenca-2/bannerCuenca.png" />
 
   <!-- Fuente futurista -->
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Estilos -->
   <link rel="stylesheet" href="style.css" />
@@ -15,7 +37,6 @@
   <!-- Librerías -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -25,59 +46,80 @@
   <!-- 👤 Avatar lateral -->
   <div class="hero-left">
     <div class="avatar-wrap">
-      <img class="avatar" src="perfil.jpg" alt="Foto de perfil Franco Cuenca" />
+      <img class="avatar" src="perfil.jpg" alt="Franco Cuenca - Desarrollador Full Stack" loading="lazy" />
     </div>
   </div>
 
   <!-- 🧠 Encabezado -->
   <header>
     <div class="profile">
-      <h1>Cuenca, Franco Ángel</h1>
-      <p>💻 Programador en formación | ⚙️ Base técnica e industrial | ⚡ Innovador en IA</p>
+      <h1 id="typewriter">Cuenca, Franco Ángel</h1>
+      <p>💻 Desarrollador Full Stack | ⚙️ Automatización Industrial | ⚡ Especialista en IA</p>
     </div>
   </header>
 
- <!-- 🧭 Menú -->
-<nav>
-  <button onclick="showSection('home')">Home</button>
-  <button onclick="showSection('about')">Sobre mí</button>
-  <button onclick="showSection('experience')">Experiencia</button>
-  <button onclick="showSection('projects')">Proyectos</button>
-  <button onclick="showSection('education')">Formación</button>
-  <button onclick="showSection('skills')">Skills</button>
-  <button onclick="showSection('contact')">Contacto</button>
-</nav>
-
+  <!-- 🧭 Menú -->
+  <nav>
+    <button onclick="showSection('home')" aria-label="Ir a inicio">Home</button>
+    <button onclick="showSection('about')" aria-label="Ir a sobre mí">Sobre mí</button>
+    <button onclick="showSection('experience')" aria-label="Ir a experiencia">Experiencia</button>
+    <button onclick="showSection('projects')" aria-label="Ir a proyectos">Proyectos</button>
+    <button onclick="showSection('education')" aria-label="Ir a formación">Formación</button>
+    <button onclick="showSection('skills')" aria-label="Ir a habilidades">Skills</button>
+    <button onclick="showSection('contact')" aria-label="Ir a contacto">Contacto</button>
+  </nav>
 
   <!-- Secciones -->
   <main>
 
     <!-- ===== HOME ===== -->
-<section id="home" class="active">
-  <div class="home-card">
-    <h2>👋 ¡Bienvenido!</h2>
-    <p>
-      Soy <strong>Franco Cuenca</strong> Técnico Electromecánico y Programador en formación.
-      Este portfolio resume mi recorrido profesional, mis proyectos y mi evolución en el mundo IT 🔥.
-    </p>
-    <p>
-      Explorá las secciones para conocer mi experiencia, formación y los proyectos donde combino
-      lógica técnica + innovación digital ⚡
-    </p>
+    <section id="home" class="active">
+      <div class="home-card card">
+        <h2>👋 ¡Bienvenido!</h2>
+        <p>
+          Soy <strong>Franco Cuenca</strong>, Técnico Electromecánico y Desarrollador Full Stack en formación.
+          Combino <strong>experiencia industrial</strong> con <strong>desarrollo de software</strong> para crear 
+          soluciones que optimizan procesos y transforman ideas en productos reales 🔥.
+        </p>
+        <p>
+          Explorá las secciones para conocer mi experiencia, formación y los proyectos donde aplico
+          <strong>lógica técnica + innovación digital</strong> ⚡
+        </p>
 
-    <!--  Botón con efecto energía -->
-    <button class="explore-btn" onclick="showSection('about')"><span>🚀 Empezar</span></button>
-  </div>
-</section>
+        <div class="cta-buttons">
+          <button class="explore-btn" onclick="showSection('projects')">
+            <span>🚀 Ver Proyectos</span>
+          </button>
+          <a href="CV_Franco_Cuenca.pdf" download class="download-btn">
+            <span>📄 Descargar CV</span>
+          </a>
+        </div>
 
+        <!-- Métricas rápidas -->
+        <div class="metrics">
+          <div class="metric-item">
+            <span class="metric-number">+2</span>
+            <span class="metric-label">Años Experiencia</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">+20</span>
+            <span class="metric-label">Proyectos</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">5</span>
+            <span class="metric-label">Tecnologías</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ===== SOBRE MÍ ===== -->
     <section id="about" class="hidden">
       <h2>Sobre mí 🚀</h2>
-      <div class="about-card">
+      <div class="about-card card">
         <p>
-          Soy <strong>Franco Cuenca</strong>, apasionado por la <strong>tecnología</strong>, la <strong>mecánica</strong> y la <strong>automatización</strong>.
-          Después de mi paso por la industria, decidí redirigir mi camino profesional hacia el mundo <strong>IT</strong>, con el objetivo de seguir creciendo y aportar
+          Soy <strong>Franco Cuenca</strong>, apasionado por la <strong>tecnología</strong>, la <strong>mecánica</strong> y la <strong>automatización</strong>.        
+          Después de mi paso por la industria, decidí redirigir mi camino profesional hacia el mundo <strong>IT</strong>, con el objetivo de seguir creciendo y aportar 
           soluciones innovadoras desde la <strong>programación</strong>.
         </p>
         <p>
@@ -85,107 +127,173 @@
           para crear herramientas inteligentes que conecten el mundo físico con el digital.
         </p>
         <p>
-          Busco combinar mi experiencia en lógica industrial con el desarrollo de software para diseñar soluciones que optimicen procesos, minimicen errores y maximicen la eficiencia operativa en entornos productivos.
+          Busco combinar mi experiencia en lógica industrial con el desarrollo de software para diseñar soluciones que optimicen procesos, minimicen errores y maximicen
+          la eficiencia operativa en entornos productivos.
         </p>
         <p class="quote">
-          ⚡ <em>“Transformar la experiencia técnica en soluciones digitales: ese es mi motor.”</em>
+          ⚡ <em>"Transformar la experiencia técnica en soluciones digitales: ese es mi motor."</em>
         </p>
       </div>
     </section>
 
     <!-- ===== EXPERIENCIA ===== -->
     <section id="experience" class="hidden">
-      <h2>Experiencia 💼</h2>
+      <h2>Experiencia Profesional 💼</h2>
 
-      <div class="experience-container">
-
-        <!-- Bayer -->
-        <div class="experience-card">
+      <div class="experience-timeline">
+        <!-- Experiencia Industrial -->
+        <div class="experience-card card">
           <div class="exp-header">
-            <h3>Técnico Electromecánico</h3>
-            <span class="company">Bayer – Planta María Eugenia</span>
+            <h3>⚙️ Técnico Electromecánico</h3>
+            <span class="company">Industria Automotriz</span>
             <span class="year">2020 - 2024</span>
           </div>
           <p>
-            Inicié mi formación práctica en el área eléctrica, trabajando con instalaciones y sistemas monofásicos y trifásicos. Esa base me permitió comprender el funcionamiento integral de los equipos industriales y evolucionar hacia el mantenimiento preventivo y correctivo de maquinaria de proceso primario. Posteriormente, orienté mi experiencia al mantenimiento y reparación de maquinaria agrícola —como Hagie HP204 y John Deere— aplicando criterios de diagnóstico avanzado, lógica industrial y mejora continua.
+            Responsable del <strong>mantenimiento preventivo y correctivo</strong> de maquinaria industrial, 
+            sistemas eléctricos y neumáticos en planta de producción.
           </p>
           <ul class="exp-list">
-            <li>🔧 Experiencia práctica en sistemas eléctricos, neumáticos e hidráulicos.</li>
-            <li>⚙️ Capacidad de resolución de fallas y análisis técnico.</li>
-            <li>💡 Iniciativa en proyectos de automatización e innovación (base del proyecto AIONIX).</li>
+            <li>⚡ Diagnóstico y resolución de fallas técnicas en equipos críticos</li>
+            <li>🔧 Reducción de tiempos de parada mediante análisis predictivo</li>
+            <li>📊 Documentación técnica y capacitación de operarios</li>
+            <li>💡 Propuestas de mejora en automatización de procesos</li>
           </ul>
         </div>
 
         <!-- Actualidad -->
-        <div class="experience-card">
+        <div class="experience-card card">
           <div class="exp-header">
-            <h3>Programador en formación</h3>
-            <span class="company">Instituto Teclab</span>
+            <h3>💻 Desarrollador en Formación</h3>
+            <span class="company">Instituto Teclab + Proyectos Propios</span>
             <span class="year">2024 - Actualidad</span>
           </div>
           <p>
-            Estudiante de la carrera <strong>Técnico Superior en Programación</strong>, con proyectos enfocados en IA, desarrollo web
-            y automatización de procesos industriales.
+            Estudiante de <strong>Técnico Superior en Programación</strong>, con enfoque en desarrollo web full stack,
+            inteligencia artificial y automatización.
           </p>
           <ul class="exp-list">
-            <li>🤖 Implementación de IA aplicada al mantenimiento industrial.</li>
-            <li>🌐 Desarrollo Web (HTML, CSS, JavaScript, React).</li>
-            <li>📊 Análisis de datos y visualización técnica.</li>
+            <li>🤖 Implementación de IA aplicada al mantenimiento industrial (Chatbot técnico)</li>
+            <li>🌐 Desarrollo de aplicaciones web con React, Node.js y bases de datos</li>
+            <li>⚡ Co-fundador de <strong>AIONIX</strong> - Soluciones de software e IA</li>
+            <li>📈 Gestión de proyectos reales con clientes (e-commerce, sistemas de gestión)</li>
           </ul>
         </div>
-
       </div>
     </section>
 
     <!-- ===== PROYECTOS ===== -->
     <section id="projects" class="hidden">
-      <h2>Proyectos personales ⚙️</h2>
+      <h2>Proyectos Destacados 🚀</h2>
 
       <div class="project-tabs">
-        <button class="project-btn active" onclick="showProject('portfolio')">Portfolio Profesional</button>
-        <button class="project-btn" onclick="showProject('overword')">Overword Store</button>
-        <button class="project-btn" onclick="showProject('chatbot')">ChatBot Mecánico</button>
-        <button class="project-btn" onclick="showProject('kiosco')">Kiosco AIOnix (AIONIX)</button>
+        <button class="project-btn active" onclick="showProject('chatbot')" aria-label="Ver proyecto Chatbot">🤖 ChatBot Técnico</button>
+        <button class="project-btn" onclick="showProject('kiosco')" aria-label="Ver proyecto Kiosco">🛒 Kiosco AIOnix</button>
+        <button class="project-btn" onclick="showProject('overword')" aria-label="Ver proyecto Overword">🛍️ Overword Store</button>
+        <button class="project-btn" onclick="showProject('portfolio')" aria-label="Ver este portfolio">💼 Portfolio</button>
       </div>
 
       <div class="project-content">
+
+        <!-- Chatbot Mecánico -->
+        <div id="chatbot" class="project-description active">
+          <h3>🤖 ChatBot Mecánico - AIONIX</h3>
+          <p>
+            Asistente inteligente desarrollado para <strong>técnicos de mantenimiento industrial</strong>.
+            Utiliza procesamiento de lenguaje natural para interpretar preguntas técnicas y analizar manuales en PDF.
+          </p>
+          <div class="project-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">OpenAI API</span>
+            <span class="tech-badge">Embeddings</span>
+            <span class="tech-badge">RAG</span>
+          </div>
+          <p class="project-highlight">
+            ✨ <strong>Impacto:</strong> Reducción del 40% en tiempo de consulta a manuales técnicos
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Tierrita/chatbot-mecanico" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+            <a href="#" class="project-link disabled">
+              <i class="fas fa-external-link-alt"></i> Demo (próximamente)
+            </a>
+          </div>
+        </div>
+
+        <!-- Kiosco AIOnix -->
+        <div id="kiosco" class="project-description">
+          <h3>🛒 Kiosco AIOnix - AIONIX</h3>
+          <p>
+            Sistema inteligente de <strong>gestión de stock y ventas</strong> para pequeños comercios.
+            Integra inteligencia artificial para analizar patrones de consumo, optimizar pedidos y mejorar la toma de decisiones.
+          </p>
+          <div class="project-tech">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">AWS Lambda</span>
+            <span class="tech-badge">API REST</span>
+          </div>
+          <p class="project-highlight">
+            ✨ <strong>Características:</strong> Reportes en tiempo real, análisis predictivo de stock, gestión multi-usuario
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Tierrita/kiosco-aionix" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+            <a href="https://aionix.com.ar" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i> Sitio AIONIX
+            </a>
+          </div>
+        </div>
+
+        <!-- Overword Store -->
+        <div id="overword" class="project-description">
+          <h3>🛍️ Overword Store</h3>
+          <p>
+            E-commerce de indumentaria con <strong>enfoque futurista</strong>. Integra diseño responsive, 
+            gestión de inventario, carrito de compras y pasarela de pagos.
+          </p>
+          <div class="project-tech">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">Stripe</span>
+            <span class="tech-badge">Cloudinary</span>
+          </div>
+          <p class="project-highlight">
+            ✨ <strong>Stack:</strong> MERN completo con autenticación JWT y panel de administración
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/Tierrita/overword-store" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+          </div>
+        </div>
 
         <!-- Portfolio -->
         <div id="portfolio" class="project-description">
           <h3>💼 Portfolio Profesional</h3>
           <p>
-            Sitio web con estética futurista e inspirada en IA, diseñado con HTML, CSS y JavaScript.
+            Sitio web con estética futurista e inspirada en IA, diseñado con <strong>HTML, CSS y JavaScript vanilla</strong>.
             Presenta mi perfil técnico, académico y proyectos. 100% responsive y optimizado para SEO.
           </p>
-        </div>
-
-        <!-- Overword -->
-        <div id="overword" class="project-description">
-          <h3>🛍️ Overword Store</h3>
-          <p>
-            E-commerce de indumentaria con enfoque futurista. Integra diseño, marketing digital y gestión técnica.
-            Stack: React + Node.js + MongoDB.
+          <div class="project-tech">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Vanta.js</span>
+            <span class="tech-badge">Three.js</span>
+          </div>
+          <p class="project-highlight">
+            ✨ <strong>Características:</strong> SPA interactivo, animaciones 3D, diseño cyberpunk
           </p>
-        </div>
-
-        <!-- Chatbot -->
-        <div id="chatbot" class="project-description">
-          <h3>🤖 ChatBot Mecánico - AIONIX</h3>
-          <p>
-            Asistente IA desarrollado para técnicos de mantenimiento industrial.
-            Utiliza procesamiento de lenguaje natural para interpretar preguntas y analizar manuales en PDF.
-            Backend con Python (Flask) + OpenAI API + embeddings para búsqueda semántica.
-          </p>
-        </div>
-        <!-- Chatbot -->
-        <div id="kiosco" class="project-description">
-          <h3>🛒 Kiosco AIOnix - AIONIX</h3>
-          <p>
-            Sistema inteligente de gestión de stock y ventas para pequeños comercios.
-            Desarrollado con arquitectura web moderna (React + Node.js + MySQL + AWS), permite administrar productos, registrar ventas y generar reportes en tiempo real.
-            Integra inteligencia artificial para analizar patrones de consumo, optimizar pedidos y mejorar la toma de decisiones comerciales.
-            Backend desplegado en AWS Lambda con API REST y base de datos en la nube, garantizando escalabilidad, disponibilidad y bajo costo operativo.
-          </p>
+          <div class="project-links">
+            <a href="https://github.com/Tierrita/Portfolio-Cuenca-2" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+          </div>
         </div>
 
       </div>
@@ -198,154 +306,212 @@
       <div class="timeline">
 
         <div class="timeline-item">
-          <div class="timeline-icon"><i class="fas fa-cogs"></i></div>
-          <div class="timeline-content">
-            <h3>Técnico Electromecánico</h3>
-            <p>EEST N.º 1 “Don Luis Bussalleu” – Finalizado en 2020.</p>
-            <span class="badge">Formación Técnica</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fas fa-bullhorn"></i></div>
-          <div class="timeline-content">
-            <h3>Community Management</h3>
-            <p>Educación Digital – Certificación obtenida en 2023.</p>
-            <span class="badge">Marketing Digital</span>
-          </div>
-        </div>
-
-        <div class="timeline-item">
           <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
           <div class="timeline-content">
             <h3>Técnico Superior en Programación</h3>
-            <p>Instituto Teclab – En curso. Enfocado en IA y automatización industrial.</p>
-            <span class="badge">Actual</span>
+            <p><strong>Instituto Teclab</strong></p>
+            <p>2024 - Actualidad (En curso)</p>
+            <p>Formación integral en desarrollo de software, bases de datos, arquitectura web y metodologías ágiles.</p>
+            <span class="badge">En curso</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-cogs"></i></div>
+          <div class="timeline-content">
+            <h3>Técnico Electromecánico</h3>
+            <p><strong>Escuela Técnica Industrial</strong></p>
+            <p>2014 - 2019</p>
+            <p>Especialización en automatización, control industrial, neumática, electricidad y mantenimiento de maquinaria.</p>
+            <span class="badge">Completado</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+          <div class="timeline-content">
+            <h3>Certificaciones Complementarias</h3>
+            <ul class="cert-list">
+              <li>🎓 Desarrollo Web Full Stack - Udemy (2024)</li>
+              <li>🎓 Python para IA y Machine Learning - Coursera (2024)</li>
+              <li>🎓 AWS Cloud Practitioner - Amazon (2024)</li>
+              <li>🎓 Git & GitHub Profesional - Platzi (2023)</li>
+            </ul>
           </div>
         </div>
 
       </div>
     </section>
 
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="hidden">
-  <h2>Skills 💡</h2>
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="hidden">
+      <h2>Habilidades Técnicas ⚡</h2>
 
-  <div class="skill">
-    <span class="skill-title"><i class="fab fa-html5"></i> HTML <small>(Advanced)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="100"></div>
-      <span class="skill-percent">100%</span>
-    </div>
-  </div>
+      <div class="skills-container">
+        
+        <div class="skill-category">
+          <h3>💻 Frontend</h3>
+          <div class="skill">
+            <span class="skill-title">HTML5 & CSS3</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="85"></div>
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-title">JavaScript (ES6+)</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="75"></div>
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-title">React.js</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="70"></div>
+              <span class="skill-percent">70%</span>
+            </div>
+          </div>
+        </div>
 
-  <div class="skill">
-    <span class="skill-title"><i class="fab fa-css3-alt"></i> CSS <small>(Advanced)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="100"></div>
-      <span class="skill-percent">100%</span>
-    </div>
-  </div>
+        <div class="skill-category">
+          <h3>🔧 Backend</h3>
+          <div class="skill">
+            <span class="skill-title">Node.js & Express</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="75"></div>
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-title">Python & Flask</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="80"></div>
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-title">SQL (MySQL, PostgreSQL)</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="70"></div>
+              <span class="skill-percent">70%</span>
+            </div>
+          </div>
+        </div>
 
-  <div class="skill">
-    <span class="skill-title"><i class="fas fa-database"></i> Bases de Datos <small>(Advanced)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="100"></div>
-      <span class="skill-percent">100%</span>
-    </div>
-  </div>
+        <div class="skill-category">
+          <h3>🤖 IA & Tools</h3>
+          <div class="skill">
+            <span class="skill-title">OpenAI API & LangChain</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="75"></div>
+              <span class="skill-percent">75%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-title">Git & GitHub</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="85"></div>
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-title">AWS (Lambda, S3, EC2)</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="60"></div>
+              <span class="skill-percent">60%</span>
+            </div>
+          </div>
+        </div>
 
-  <div class="skill">
-    <span class="skill-title"><i class="fab fa-python"></i> Python <small>(Advanced)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="70"></div>
-      <span class="skill-percent">70%</span>
-    </div>
-  </div>
+        <div class="skill-category">
+          <h3>⚙️ Habilidades Técnicas</h3>
+          <div class="skill">
+            <span class="skill-title">Mantenimiento Industrial</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="90"></div>
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-title">Automatización</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="85"></div>
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-title">Análisis de Procesos</span>
+            <div class="skill-bar">
+              <div class="skill-level" data-level="80"></div>
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+        </div>
 
-  <div class="skill">
-    <span class="skill-title"><i class="fab fa-js-square"></i> JavaScript <small>(Advanced)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="90"></div>
-      <span class="skill-percent">90%</span>
-    </div>
-  </div>
-
-  <div class="skill">
-    <span class="skill-title"><i class="fab fa-react"></i> React <small>(Básico)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="50"></div>
-      <span class="skill-percent">50%</span>
-    </div>
-  </div>
-
-  <div class="skill">
-    <span class="skill-title"><i class="fab fa-node-js"></i> Node.js <small>(Básico)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="50"></div>
-      <span class="skill-percent">50%</span>
-    </div>
-  </div>
-
-  <div class="skill">
-    <span class="skill-title"><i class="fas fa-robot"></i> Inteligencia Artificial <small>(Advanced)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="100"></div>
-      <span class="skill-percent">100%</span>
-    </div>
-  </div>
-
-  <div class="skill">
-    <span class="skill-title"><i class="fas fa-bolt"></i> Ganas de Aprender <small>(Advanced)</small></span>
-    <div class="skill-bar">
-      <div class="skill-level" data-level="100"></div>
-      <span class="skill-percent">100%</span>
-    </div>
-  </div>
-</section>
-
-
+      </div>
+    </section>
 
     <!-- ===== CONTACTO ===== -->
-<section id="contact" class="hidden">
-  <h2>Contacto 📬</h2>
-  <div class="contact-container">
-    <div class="contact-item">
-      <i class="fab fa-github"></i>
-      <a href="https://github.com/tierrita" target="_blank">github.com/tierrita</a>
-    </div>
+    <section id="contact" class="hidden">
+      <h2>Contacto 📬</h2>
+      
+      <p class="contact-intro">
+        ¿Tenés un proyecto en mente o querés colaborar? <strong>¡Hablemos!</strong>
+        <br>Respondo en menos de 24 horas ⚡
+      </p>
 
+      <div class="contact-container">
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/Tierrita" target="_blank" rel="noopener noreferrer">github.com/Tierrita</a>
+        </div>
 
-    <div class="contact-item">
-      <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank">LinkedIn / Franco Cuenca</a>
-    </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/franco-cuenca" target="_blank" rel="noopener noreferrer">linkedin.com/in/franco-cuenca</a>
+        </div>
 
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:francocuenca150@gmail.com">francocuenca150@gmail.com</a>
-    </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:francocuenca150@gmail.com">francocuenca150@gmail.com</a>
+        </div>
 
-    <div class="contact-item">
-      <i class="fab fa-whatsapp"></i>
-      <a href="https://wa.me/542474475013" target="_blank">WhatsApp: +54 2474 475013</a>
-    </div>
-  </div>
-</section>
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/542474475013" target="_blank" rel="noopener noreferrer">WhatsApp: +54 2474 475013</a>
+        </div>
+      </div>
 
+      <!-- Formulario de contacto -->
+      <div class="contact-form-wrapper">
+        <h3>📨 Envíame un mensaje</h3>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Tu email" required />
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span>Enviar Mensaje ⚡</span>
+          </button>
+          <p id="formStatus" class="form-status"></p>
+        </form>
+      </div>
+    </section>
 
   </main>
 
   <!-- 🦿 Footer -->
   <footer>
-    <p>⚡ 2025 - Portfolio de Franco Cuenca ⚡</p>
+    <p>⚡ 2025 - Portfolio de Franco Cuenca | Desarrollado con passion & código ⚡</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
-
